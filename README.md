@@ -29,12 +29,13 @@ require("gitmoji").setup({})
 -- or using ´opts´ table in lazy table
 ```
 
-| Key    | Type    | Description    |
-|---------------- | --------------- | --------------- |
-| filetypes    | table of strings    | Filetypes to add gitmoji completion to.  |
+| Key    | Type    | Defaults | Description    |
+|---------------- | -------- | ------- | --------------- |
+| `filetypes`    | `table`    | `{"gitcommit"}`| Filetypes to add gitmoji completion to.  |
 
 ## Usage
 
 Gitmoji completion simply adds a `gitmoji` source to nvim-cmp setup.
+
 The completion is triggered on the `:` character.
 
