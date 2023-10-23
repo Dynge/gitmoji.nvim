@@ -1,5 +1,7 @@
 local M = {}
 
+local gitmoji_source = "gitmoji"
+
 local function contains_source(source, filetype)
 	local ok, cmp = pcall(require, "cmp")
 	if not ok then
@@ -24,7 +26,7 @@ function M.setup(opts)
 		return
 	end
 
-	if not contains_source("gitmoji") then
+	if not contains_source(gitmoji_source) then
 		require("gitmoji.sources").setup()
 	end
 
@@ -35,16 +37,14 @@ function M.setup(opts)
 	end
 
 	for _, ft in ipairs(merged_opts.filetypes) do
-		if not contains_source("gitmoji", ft) then
+		if not contains_source(gitmoji_source, ft) then
 			local ft_config = cmp.get_config(ft)
 			table.insert(ft_config.sources, {
-				name = "gitmoji",
+				name = gitmoji_source,
 			})
 			cmp.setup.filetype(ft, ft_config)
 		end
 	end
 end
-
-M.setup() -- default opts
 
 return M
