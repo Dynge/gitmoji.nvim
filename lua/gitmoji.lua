@@ -28,7 +28,7 @@ function M.setup(opts)
 		require("gitmoji.sources").setup()
 	end
 
-	local merged_opts = require("gitmoji.defaults")
+	local merged_opts = require("gitmoji.config")
 
 	for k, v in pairs(opts or {}) do
 		merged_opts[k] = v
