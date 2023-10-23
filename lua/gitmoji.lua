@@ -2,7 +2,6 @@ local M = {}
 
 local gitmoji_source = "gitmoji"
 
-
 function M.setup(opts)
 	local ok, cmp = pcall(require, "cmp")
 	if not ok then
@@ -10,7 +9,7 @@ function M.setup(opts)
 	end
 	local utils = require("gitmoji.utils")
 
-		require("gitmoji.sources").setup()
+	require("gitmoji.sources").setup()
 
 	local merged_opts = require("gitmoji.config")
 
