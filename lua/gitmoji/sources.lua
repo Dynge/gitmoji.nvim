@@ -5,6 +5,10 @@ function M.setup()
 	if not ok then
 		return
 	end
+	local utils = require("gitmoji.utils")
+	if utils.contains_source(require("gitmoji").source_name()) then
+		return
+	end
 
 	local source = {}
 	source.new = function()
