@@ -14,12 +14,22 @@ function M.setup(opts)
 		merged_opts[k] = v
 	end
 
-	for ft in merged_opts.filetypes do
-		cmp.setup.filetype(ft, {
-			sources = { {
+	for _, ft in ipairs(merged_opts.filetypes) do
+		local ft_config = cmp.get_config(ft)
+		local missing = true
+		for _, group in ipairs(ft_config.sources) do
+			for key, value in pairs(group) do
+				if key == "name" and value == "gitmoji" then
+					missing = false
+				end
+			end
+		end
+		if missing then
+			table.insert(ft_config.sources, {
 				name = "gitmoji",
-			} },
-		})
+			})
+			cmp.setup.filetype(ft, ft_config)
+		end
 	end
 end
 
