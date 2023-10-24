@@ -9,11 +9,6 @@ function M.setup(opts)
 end
 
 function M.get_source()
-	local ok, cmp = pcall(require, "cmp")
-	if not ok then
-		return
-	end
-
 	local source = {}
 	source.is_available = function()
 		local ft = vim.bo.filetype
