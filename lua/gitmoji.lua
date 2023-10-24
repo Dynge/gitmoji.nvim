@@ -10,10 +10,12 @@ end
 
 function M.get_source()
 	local source = {}
+
 	source.is_available = function()
 		local ft = vim.bo.filetype
 		return vim.tbl_contains(gitmoji_config.filetypes, ft)
 	end
+
 	source.new = function()
 		local self = setmetatable({}, { __index = source })
 		self.items = nil
