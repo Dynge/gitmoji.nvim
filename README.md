@@ -1,6 +1,6 @@
 # gitmoji.nvim
 
-[Gitmojis](https://gitmoji.dev/) for Neovim
+[Gitmojis](https://gitmoji.dev/) for Neovim using [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
 <img src="./gitcommit.gif" align="left"/>
 
