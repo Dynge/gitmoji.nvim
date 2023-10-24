@@ -2,30 +2,50 @@ local M = {}
 
 local gitmoji_source = "gitmoji"
 
+local gitmoji_config = require("gitmoji.config")
+
 function M.setup(opts)
+	gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
+end
+
+function M.get_source()
 	local ok, cmp = pcall(require, "cmp")
 	if not ok then
 		return
 	end
-	local utils = require("gitmoji.utils")
 
-	require("gitmoji.sources").setup()
-
-	local merged_opts = require("gitmoji.config")
-
-	for k, v in pairs(opts or {}) do
-		merged_opts[k] = v
+	local source = {}
+	source.is_available = function()
+		local ft = vim.bo.filetype
+		return vim.tbl_contains(gitmoji_config.filetypes, ft)
+	end
+	source.new = function()
+		local self = setmetatable({}, { __index = source })
+		self.items = nil
+		return self
 	end
 
-	for _, ft in ipairs(merged_opts.filetypes) do
-		if not utils.contains_source(gitmoji_source, ft) then
-			local ft_config = cmp.get_config(ft)
-			table.insert(ft_config.sources, {
-				name = gitmoji_source,
-			})
-			cmp.setup.filetype(ft, ft_config)
+	source.get_trigger_characters = function()
+		return { ":" }
+	end
+
+	source.get_keyword_pattern = function()
+		return [[\%(\s\|^\)\zs:\w*:\?]]
+	end
+
+	source.complete = function(self, request, callback)
+		-- Avoid unexpected completion.
+		if not vim.regex(self.get_keyword_pattern() .. "$"):match_str(request.context.cursor_before_line) then
+			return callback()
 		end
+
+		if not self.items then
+			self.items = require("gitmoji.items")
+		end
+
+		callback(self.items)
 	end
+	return source
 end
 
 function M.source_name()
