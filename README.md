@@ -27,11 +27,31 @@ Configuration and setup is done by calling the `.setup()` method like so:
 require("gitmoji").setup({})
 
 -- or using ´opts´ table in lazy table
+{
+    "Dynge/gitmoji.nvim",
+    dependencies = {
+        "hrsh7th/nvim-cmp",
+    },
+    opts = {}, -- uses defaults
+    ft = "gitcommit",
+},
 ```
 
 | Key    | Type    | Defaults | Description    |
 |---------------- | -------- | ------- | --------------- |
-| `filetypes`    | `table`    | `{"gitcommit"}`| Filetypes to add gitmoji completion to.  |
+| `filetypes`    | `table`    | `{ "gitcommit" }`| Filetypes to enable gitmoji completions for.  |
+
+___
+
+Be sure to set the source into your nvim-cmp opts:
+
+```lua
+require("cmp").setup({
+  sources = {
+    { name = 'gitmoji' }
+  })
+})
+```
 
 ## Usage
 
