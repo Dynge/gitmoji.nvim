@@ -5,7 +5,7 @@ local gitmoji_source = "gitmoji"
 local gitmoji_config = require("gitmoji.config")
 
 function M.setup(opts)
-	gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
+    gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
 end
 
 function M.get_source()
@@ -54,7 +54,7 @@ function M.get_source()
 end
 
 function M.source_name()
-	return gitmoji_source
+    return gitmoji_source
 end
 
 return M
