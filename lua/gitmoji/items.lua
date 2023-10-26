@@ -1,4 +1,11 @@
 ---@class lsp.CompletionItem
+---@field insertText string the text to insert when completion is selected.
+---@field text string the text representation of the gitmoji
+---@field emoji string the emoji representation of the gitmoji
+---@field kind number the number representing the CompletionItemKind (see lsp documentation)
+---@field label string the label shown in the picker window
+---@field documentation table table specifying additional documentation on hover
+---@field filterText string the text that will be used to filter emojis when typing
 
 ---@type lsp.CompletionItem[]
 return {
