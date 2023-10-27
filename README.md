@@ -32,14 +32,19 @@ require("gitmoji").setup({})
     dependencies = {
         "hrsh7th/nvim-cmp",
     },
-    opts = {}, -- uses defaults
+    opts = { -- the values below are the defaults
+        filetypes = { "gitcommit" },
+        completion = {
+            append_space = false,
+            complete_as = "emoji",
+        },
+    },
     ft = "gitcommit",
 },
 ```
 
 > **_Note:_**
-You can read the possible values in the [help](./doc/gitmoji.txt) file
-and see defaults in [config.lua](./lua/gitmoji/config.lua).
+For more details on the config options read the [help](./doc/gitmoji.txt) file.
 
 Be sure to set the source into your nvim-cmp opts:
 

@@ -4,7 +4,7 @@
 ---
 ---@class gitmoji.config
 ---@field filetypes string[] array of filetypes to add gitmoji completions for.
----@field completion gitmoji.completion
+---@field completion gitmoji.completion configurations for what to write after selection
 local config = {
     filetypes = { "gitcommit" },
     completion = {
