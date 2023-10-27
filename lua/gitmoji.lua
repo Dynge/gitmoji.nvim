@@ -1,14 +1,19 @@
-local M = {}
+local Gitmoji = {}
 
 local gitmoji_source = "gitmoji"
 
 local gitmoji_config = require("gitmoji.config")
 
-function M.setup(opts)
+--- Setup
+---
+--- Setup function. This method simply merges default configs with opts table.
+---
+---@param opts gitmoji.config configurations for gitmoji.nvim
+function Gitmoji.setup(opts)
     gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
 end
 
-function M.get_source()
+function Gitmoji.get_source()
     local source = {}
 
     source.is_available = function()
@@ -53,8 +58,11 @@ function M.get_source()
     return source
 end
 
-function M.source_name()
+--- Small helper function to get the name of the gitmoji source.
+---
+---@return string source name of the gitmoji source
+function Gitmoji.source_name()
     return gitmoji_source
 end
 
-return M
+return Gitmoji

@@ -36,12 +36,9 @@ require("gitmoji").setup({})
     ft = "gitcommit",
 },
 ```
-
-| Key    | Type    | Defaults | Description    |
-|---------------- | -------- | ------- | --------------- |
-| `filetypes`    | `table`    | `{ "gitcommit" }`| Filetypes to enable gitmoji completions for.  |
-
-___
+**Note**
+You can read the possible values in the [help](./doc/gitmoji.txt) file
+and see defaults in [config.lua](./lua/gitmoji/config.lua).
 
 Be sure to set the source into your nvim-cmp opts:
 
