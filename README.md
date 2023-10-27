@@ -36,7 +36,8 @@ require("gitmoji").setup({})
     ft = "gitcommit",
 },
 ```
-**Note**
+
+> **_Note:_**
 You can read the possible values in the [help](./doc/gitmoji.txt) file
 and see defaults in [config.lua](./lua/gitmoji/config.lua).
 
