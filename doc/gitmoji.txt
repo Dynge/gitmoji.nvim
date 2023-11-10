@@ -1,39 +1,81 @@
-==============================================================================
-------------------------------------------------------------------------------
-                                                               *Gitmoji.setup()*
-                            `Gitmoji.setup`({opts})
-Setup
+*gitmoji.nvim*
 
+==============================================================================
+
+Gitmoji is a plugin to help you use gitmojis in your commits.
+
+The default setting enables gitmoji for `gitcommit` filetypes.
+Then, with the help of nvim-cmp, you can type `:` - and get a list of
+completions for all gitmojis emojis.
+
+
+------------------------------------------------------------------------------
+                                                     *gitmoji-table-of-contents*
+Table of Contents
+  Setup........................................................|gitmoji-setup|
+  
+  Configuration........................................|gitmoji-configuration|
+
+------------------------------------------------------------------------------
+                                                                 *gitmoji-setup*
+
+                               `M.setup`({opts})
 Setup function. This method simply merges default configs with opts table.
+You can read more about the possible settings at |gitmoji-configuration|.
 
 Parameters~
 {opts} gitmoji.config configurations for gitmoji.nvim
 
+Usage~
+require("gitmoji").setup({}) -- replace `{}` with your config table
+
 ------------------------------------------------------------------------------
-                                                         *Gitmoji.source_name()*
-                            `Gitmoji.source_name`()
+                                                                *gitmoji-source*
+                               `M.source_name`()
+
 Small helper function to get the name of the gitmoji source.
 
 Return~
 `(string)` source name of the gitmoji source
 
+Usage~
+require("gitmoji").source_name()
+
 
 ==============================================================================
 ------------------------------------------------------------------------------
-                                                                        *config*
+                                                         *gitmoji-configuration*
                                     `config`
-Configuration
+Configuration is a simple lua table with a few settings.
 
-Configuration of gitmoji consists of a few fields as seen below:
+You can set a list of filetypes that you wish the gitmoji completions to
+be active for, and you can set the completion type you wish (eg. emojis
+or text). Finally it is possible to have the completion automatically add
+a space after insertion in order to be ready for more text after gitmoji
+insertion.
 
 Class~
 {gitmoji.config}
+
 Fields~
 {filetypes} `(string[])` array of filetypes to add gitmoji completions for.
-{completion} gitmoji.completion
+{completion} (gitmoji.completion) configurations for what to write after selection
+
+
+Default values:
+>
+  local config = {
+      filetypes = { "gitcommit" },
+      completion = {
+          append_space = false,
+          complete_as = "emoji",
+      },
+  }
+
+<
 
 ------------------------------------------------------------------------------
-Completion table
+                                                       *gitmoji-completion-opts*
 
 The completion table consists of two simple fields as can be seen below:
 
@@ -41,16 +83,15 @@ Class~
 {gitmoji.completion}
 Fields~
 {append_space} `(boolean)` append space after completion?
-{complete_as} gitmoji.complete_type complete as emoji or text?
+{complete_as} (gitmoji.complete_as) complete as emoji or text?
+- see |gitmoji-complete-as|
 
 ------------------------------------------------------------------------------
-Completion type
+                                                           *gitmoji-complete-as*
 
-Currently there are two different completion types provided.
-This includes 'emoji' and 'text'.
-
-"emoji"
-"text"
+Currently there are two different completion types provided:
+"emoji"  -- inserts emojis
+"text"   -- insert text eg `:bug:`
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:

@@ -1,19 +1,42 @@
-local Gitmoji = {}
+--- *gitmoji.nvim*
+---
+--- ==============================================================================
+---
+--- Gitmoji is a plugin to help you use gitmojis in your commits.
+---
+--- The default setting enables gitmoji for `gitcommit` filetypes.
+--- Then, with the help of nvim-cmp, you can type `:` - and get a list of
+--- completions for all gitmojis emojis.
+---
+
+
+--- Table of Contents
+---@tag gitmoji-table-of-contents
+---@toc
+
+
+
+
+local M = {}
 
 local gitmoji_source = "gitmoji"
 
 local gitmoji_config = require("gitmoji.config")
 
---- Setup
+---@toc_entry Setup
+---@tag gitmoji-setup
 ---
---- Setup function. This method simply merges default configs with opts table.
+---@text Setup function. This method simply merges default configs with opts table.
+--- You can read more about the possible settings at |gitmoji-configuration|.
 ---
 ---@param opts gitmoji.config configurations for gitmoji.nvim
-function Gitmoji.setup(opts)
+---
+---@usage require("gitmoji").setup({}) -- replace `{}` with your config table
+function M.setup(opts)
     gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
 end
 
-function Gitmoji.get_source()
+function M.get_source()
     local source = {}
 
     source.is_available = function()
@@ -58,11 +81,15 @@ function Gitmoji.get_source()
     return source
 end
 
---- Small helper function to get the name of the gitmoji source.
+---
+---@tag gitmoji-source
+---@text Small helper function to get the name of the gitmoji source.
 ---
 ---@return string source name of the gitmoji source
-function Gitmoji.source_name()
+---
+---@usage require("gitmoji").source_name()
+function M.source_name()
     return gitmoji_source
 end
 
-return Gitmoji
+return M
