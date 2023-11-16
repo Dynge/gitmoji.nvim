@@ -9,13 +9,9 @@
 --- completions for all gitmojis emojis.
 ---
 
-
 --- Table of Contents
 ---@tag gitmoji-table-of-contents
 ---@toc
-
-
-
 
 local M = {}
 
