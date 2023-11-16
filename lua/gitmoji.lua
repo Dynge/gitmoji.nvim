@@ -34,20 +34,53 @@ local gitmoji_config = require("gitmoji.config")
 ---@usage require("gitmoji").setup({}) -- replace `{}` with your config table
 function M.setup(opts)
     gitmoji_config = vim.tbl_deep_extend("force", gitmoji_config, opts)
+
+    -- User commands
+    vim.api.nvim_create_user_command("Gitmoji", function()
+        vim.cmd.startinsert()
+        vim.api.nvim_input(":")
+        require("cmp").complete({
+            config = {
+                sources = {
+                    {
+                        name = "gitmoji",
+                        option = {
+                            filetypes = {},
+                        },
+                    },
+                },
+            },
+        })
+    end, {})
 end
 
 function M.get_source()
     local source = {}
 
-    source.is_available = function()
-        local ft = vim.bo.filetype
-        return vim.tbl_contains(gitmoji_config.filetypes, ft)
-    end
-
     source.new = function()
         local self = setmetatable({}, { __index = source })
         self.items = nil
         return self
+    end
+
+    ---@return gitmoji.config
+    source._validate_config = function(_, params)
+        local opts = vim.tbl_deep_extend("force", gitmoji_config, params.option or {})
+        vim.validate({
+            filetypes = { opts.filetypes, "table" },
+            ["completion.append_space"] = { opts.completion.append_space, "boolean" },
+            ["completion.complete_as"] = { opts.completion.complete_as, "string" },
+        })
+        return opts
+    end
+
+    source.is_available = function(_, opts)
+        if not opts or vim.tbl_isempty(opts.filetypes) then
+            return true
+        end
+
+        local ft = vim.bo.filetype
+        return vim.tbl_contains(opts.filetypes, ft)
     end
 
     source.get_trigger_characters = function()
@@ -58,9 +91,10 @@ function M.get_source()
         return [[\%(\s\|^\)\zs:\w*:\?]]
     end
 
-    source.complete = function(self, request, callback)
-        -- Avoid unexpected completion.
-        if not vim.regex(self.get_keyword_pattern() .. "$"):match_str(request.context.cursor_before_line) then
+    source.complete = function(self, params, callback)
+        local opts = self:_validate_config(params)
+
+        if not self:is_available(opts) then
             return callback()
         end
 
@@ -69,8 +103,8 @@ function M.get_source()
             self.items = {}
             local gitmoji_items = require("gitmoji.items")
             for _, item in ipairs(gitmoji_items) do
-                item.insertText = item[gitmoji_config.completion.complete_as]
-                    .. (gitmoji_config.completion.append_space and " " or "")
+                item.insertText = item[opts.completion.complete_as]
+                    .. (opts.completion.append_space and " " or "")
                 table.insert(self.items, item)
             end
         end
