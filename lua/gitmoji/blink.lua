@@ -46,7 +46,6 @@ function source:get_completions(ctx, callback)
             is_incomplete_forward = false,
         })
     end
-    vim.notify(vim.inspect(ctx))
 
     ---@type lsp.CompletionItem[]
     self.items = {}
