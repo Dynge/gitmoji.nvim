@@ -25,7 +25,7 @@ local gitmoji_config = require("gitmoji.config")
 ---@text Setup function. This method simply merges default configs with opts table.
 --- You can read more about the possible settings at |gitmoji-configuration|.
 ---
----@param opts gitmoji.config configurations for gitmoji.nvim
+---@param opts GitmojiConfig configurations for gitmoji.nvim
 ---
 ---@usage require("gitmoji").setup({}) -- replace `{}` with your config table
 function M.setup(opts)
@@ -59,7 +59,7 @@ function M.get_source()
         return self
     end
 
-    ---@return gitmoji.config
+    ---@return GitmojiConfig
     source._validate_config = function(_, params)
         local opts = vim.tbl_deep_extend("force", gitmoji_config, params.option or {})
         vim.validate({

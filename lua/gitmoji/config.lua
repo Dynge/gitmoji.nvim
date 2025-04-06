@@ -8,10 +8,10 @@
 --- a space after insertion in order to be ready for more text after gitmoji
 --- insertion.
 ---
----@class gitmoji.config
+---@class GitmojiConfig
 ---
 ---@field filetypes string[] array of filetypes to add gitmoji completions for.
----@field completion (gitmoji.completion) configurations for what to write after selection
+---@field completion (GitmojiCompletion) configurations for what to write after selection
 ---
 ---
 ---@text Default values:
@@ -28,7 +28,7 @@ local config = {
 ---
 ---@text The completion table consists of two simple fields as can be seen below:
 ---
----@class gitmoji.completion
+---@class GitmojiCompletion
 ---@field append_space boolean append space after completion?
 ---@field complete_as (gitmoji.complete_as) complete as emoji or text?
 --- - see |gitmoji-complete-as|

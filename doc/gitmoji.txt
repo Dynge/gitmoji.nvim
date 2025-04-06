@@ -24,7 +24,7 @@ Setup function. This method simply merges default configs with opts table.
 You can read more about the possible settings at |gitmoji-configuration|.
 
 Parameters~
-{opts} gitmoji.config configurations for gitmoji.nvim
+{opts} GitmojiConfig configurations for gitmoji.nvim
 
 Usage~
 require("gitmoji").setup({}) -- replace `{}` with your config table
@@ -55,11 +55,11 @@ a space after insertion in order to be ready for more text after gitmoji
 insertion.
 
 Class~
-{gitmoji.config}
+{GitmojiConfig}
 
 Fields~
 {filetypes} `(string[])` array of filetypes to add gitmoji completions for.
-{completion} (gitmoji.completion) configurations for what to write after selection
+{completion} (GitmojiCompletion) configurations for what to write after selection
 
 
 Default values:
@@ -80,7 +80,7 @@ Default values:
 The completion table consists of two simple fields as can be seen below:
 
 Class~
-{gitmoji.completion}
+{GitmojiCompletion}
 Fields~
 {append_space} `(boolean)` append space after completion?
 {complete_as} (gitmoji.complete_as) complete as emoji or text?
