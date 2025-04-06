@@ -1,17 +1,19 @@
 # gitmoji.nvim
 
-[Gitmojis](https://gitmoji.dev/) for Neovim using [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+[Gitmojis](https://gitmoji.dev/) for Neovim using [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) or [blink.nvim](https://github.com/saghen/blink.cmp)
 
 <img src="./gitcommit.gif" align="left"/>
 
 ## Installation
 
 You can install the plugin via [Lazy](https://github.com/folke/lazy.nvim) like this:
+
 ```lua
 {
     "Dynge/gitmoji.nvim",
     dependencies = {
-        "hrsh7th/nvim-cmp",
+        "hrsh7th/nvim-cmp", -- for nvim-cmp completion
+        "Saghen/blink.cmp", -- for blink completion
     },
     opts = {},
     ft = "gitcommit",
@@ -30,7 +32,8 @@ require("gitmoji").setup({})
 {
     "Dynge/gitmoji.nvim",
     dependencies = {
-        "hrsh7th/nvim-cmp",
+        "hrsh7th/nvim-cmp", -- for nvim-cmp completion
+        "Saghen/blink.cmp", -- for blink completion
     },
     opts = { -- the values below are the defaults
         filetypes = { "gitcommit" },
@@ -40,11 +43,15 @@ require("gitmoji").setup({})
         },
     },
     ft = "gitcommit",
-},
+}
 ```
 
 > **_Note:_**
-For more details on the config options read the [help](./doc/gitmoji.txt) file.
+> For more details on the config options read the [help](./doc/gitmoji.txt) file.
+
+### Setup with nvim-cmp
+
+Gitmoji completion simply adds a `gitmoji` source to nvim-cmp setup.
 
 Be sure to set the source into your nvim-cmp opts:
 
@@ -56,9 +63,33 @@ require("cmp").setup({
 })
 ```
 
-## Usage
+### Setup with blink
 
-Gitmoji completion simply adds a `gitmoji` source to nvim-cmp setup.
+When using blink the setup via `require("gitmoji").setup(opts)` will be ignored, instead the options are set in the setup of `blink` under `providers`:
+
+```lua
+require("blink").setup({
+    sources = {
+        default = {
+            -- your sources
+            -- ...
+            "gitmoji"
+        },
+        providers = {
+            gitmoji = {
+                name = "gitmoji",
+                module = "gitmoji.blink",
+                opts = { -- gitmoji config values goes here
+                    filetypes = { "gitcommit", "jj" },
+                },
+            },
+        },
+    },
+})
+
+
+## Usage
 
 The completion is triggered on the `:` character.
 
+```
