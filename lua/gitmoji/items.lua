@@ -11,7 +11,7 @@
 return {
     {
         text = ":art:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🎨 Improve structure / format of the code",
         documentation = {
             kind = "plaintext",
@@ -20,10 +20,11 @@ return {
         emoji = "🎨",
         filterText = ":art: Improve structure / format of the code",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":zap:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⚡ Improve performance",
         documentation = {
             kind = "plaintext",
@@ -32,10 +33,11 @@ return {
         emoji = "⚡",
         filterText = ":zap: Improve performance",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":fire:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔥 Remove code or files",
         documentation = {
             kind = "plaintext",
@@ -44,10 +46,11 @@ return {
         emoji = "🔥",
         filterText = ":fire: Remove code or files",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":bug:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🐛 Fix a bug",
         documentation = {
             kind = "plaintext",
@@ -56,10 +59,11 @@ return {
         emoji = "🐛",
         filterText = ":bug: Fix a bug",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":ambulance:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚑 Critical hotfix",
         documentation = {
             kind = "plaintext",
@@ -68,10 +72,11 @@ return {
         emoji = "🚑",
         filterText = ":ambulance: Critical hotfix",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":sparkles:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ✨ Introduce new features",
         documentation = {
             kind = "plaintext",
@@ -80,10 +85,11 @@ return {
         emoji = "✨",
         filterText = ":sparkles: Introduce new features",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":memo:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📝 Add or update documentation",
         documentation = {
             kind = "plaintext",
@@ -92,10 +98,11 @@ return {
         emoji = "📝",
         filterText = ":memo: Add or update documentation",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":rocket:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚀 Deploy stuff!",
         documentation = {
             kind = "plaintext",
@@ -104,10 +111,11 @@ return {
         emoji = "🚀",
         filterText = ":rocket: Deploy stuff!",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":lipstick:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💄 Add or update the UI and style files",
         documentation = {
             kind = "plaintext",
@@ -116,10 +124,11 @@ return {
         emoji = "💄",
         filterText = ":lipstick: Add or update the UI and style files",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":tada:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🎉 Begin a project",
         documentation = {
             kind = "plaintext",
@@ -128,10 +137,11 @@ return {
         emoji = "🎉",
         filterText = ":tada: Begin a project",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":white_check_mark:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ✅ Add, update, or pass tests",
         documentation = {
             kind = "plaintext",
@@ -140,10 +150,11 @@ return {
         emoji = "✅",
         filterText = ":white_check_mark: Add, update, or pass tests",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":lock:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔒️ Fix security issues",
         documentation = {
             kind = "plaintext",
@@ -152,10 +163,11 @@ return {
         emoji = "🔒️",
         filterText = ":lock: Fix security issues",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":closed_lock_with_key:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔐 Add or update secrets",
         documentation = {
             kind = "plaintext",
@@ -164,10 +176,11 @@ return {
         emoji = "🔐",
         filterText = ":closed_lock_with_key: Add or update secrets",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":bookmark:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔖 Release / Version tags",
         documentation = {
             kind = "plaintext",
@@ -176,10 +189,11 @@ return {
         emoji = "🔖",
         filterText = ":bookmark: Release / Version tags",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":rotating_light:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚨 Fix compiler / linter warnings",
         documentation = {
             kind = "plaintext",
@@ -188,10 +202,11 @@ return {
         emoji = "🚨",
         filterText = ":rotating_light: Fix compiler / linter warnings",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":construction:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚧 Work in progress",
         documentation = {
             kind = "plaintext",
@@ -200,10 +215,11 @@ return {
         emoji = "🚧",
         filterText = ":construction: Work in progress",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":green_heart:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💚 Fix CI Build",
         documentation = {
             kind = "plaintext",
@@ -212,10 +228,11 @@ return {
         emoji = "💚",
         filterText = ":green_heart: Fix CI Build",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":arrow_down:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⬇️  Downgrade dependencies",
         documentation = {
             kind = "plaintext",
@@ -224,10 +241,11 @@ return {
         emoji = "⬇️",
         filterText = ":arrow_down: Downgrade dependencies",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":arrow_up:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⬆️ Upgrade dependencies",
         documentation = {
             kind = "plaintext",
@@ -236,10 +254,11 @@ return {
         emoji = "⬆️",
         filterText = ":arrow_up: Upgrade dependencies",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":pushpin:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📌 Pin dependencies to specific versions",
         documentation = {
             kind = "plaintext",
@@ -248,10 +267,11 @@ return {
         emoji = "📌",
         filterText = ":pushpin: Pin dependencies to specific versions",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":construction_worker:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 👷 Add or update CI build system",
         documentation = {
             kind = "plaintext",
@@ -260,10 +280,11 @@ return {
         emoji = "👷",
         filterText = ":construction_worker: Add or update CI build system",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":chart_with_upwards_trend:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📈 Add or update analytics or track code",
         documentation = {
             kind = "plaintext",
@@ -272,10 +293,11 @@ return {
         emoji = "📈",
         filterText = ":chart_with_upwards_trend: Add or update analytics or track code",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":recycle:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ♻️  Refactor code",
         documentation = {
             kind = "plaintext",
@@ -284,10 +306,11 @@ return {
         emoji = "♻️",
         filterText = ":recycle: Refactor code",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":heavy_plus_sign:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ➕ Add a dependency",
         documentation = {
             kind = "plaintext",
@@ -296,10 +319,11 @@ return {
         emoji = "➕",
         filterText = ":heavy_plus_sign: Add a dependency",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":heavy_minus_sign:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ➖ Remove a dependency",
         documentation = {
             kind = "plaintext",
@@ -308,10 +332,11 @@ return {
         emoji = "➖",
         filterText = ":heavy_minus_sign: Remove a dependency",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":wrench:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔧 Add or update configuration files",
         documentation = {
             kind = "plaintext",
@@ -320,10 +345,11 @@ return {
         emoji = "🔧",
         filterText = ":wrench: Add or update configuration files",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":hammer:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔨 Add or update development scripts",
         documentation = {
             kind = "plaintext",
@@ -332,10 +358,11 @@ return {
         emoji = "🔨",
         filterText = ":hammer: Add or update development scripts",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":globe_with_meridans:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🌐 Internationalization and localization",
         documentation = {
             kind = "plaintext",
@@ -344,10 +371,11 @@ return {
         emoji = "🌐",
         filterText = ":globe_with_meridans: Internationalization and localization",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":pencil2:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ✏️  Fix typos",
         documentation = {
             kind = "plaintext",
@@ -356,10 +384,11 @@ return {
         emoji = "✏️",
         filterText = ":pencil2: Fix typos",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":poop:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💩 Write bad code that needs to be improved",
         documentation = {
             kind = "plaintext",
@@ -368,10 +397,11 @@ return {
         emoji = "💩",
         filterText = ":poop: Write bad code that needs to be improved",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":rewind:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⏪️ Revert changes",
         documentation = {
             kind = "plaintext",
@@ -380,10 +410,11 @@ return {
         emoji = "⏪️",
         filterText = ":rewind: Revert changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":twisted_rightwards_arrows:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔀 Merge branches",
         documentation = {
             kind = "plaintext",
@@ -392,10 +423,11 @@ return {
         emoji = "🔀",
         filterText = ":twisted_rightwards_arrows: Merge branches",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":package:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📦️ Add or update compiled files or packages",
         documentation = {
             kind = "plaintext",
@@ -404,10 +436,11 @@ return {
         emoji = "📦️",
         filterText = ":package: Add or update compiled files or packages",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":alien:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 👽️ Update code due to external API changes",
         documentation = {
             kind = "plaintext",
@@ -416,10 +449,11 @@ return {
         emoji = "👽️",
         filterText = ":alien: Update code due to external API changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":truck:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚚 Move or rename resources (e.g.: files, paths, routes)",
         documentation = {
             kind = "plaintext",
@@ -428,10 +462,11 @@ return {
         emoji = "🚚",
         filterText = ":truck: Move or rename resources (e.g.: files, paths, routes)",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":page_facing_up:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📄 Add or update license",
         documentation = {
             kind = "plaintext",
@@ -440,10 +475,11 @@ return {
         emoji = "📄",
         filterText = ":page_facing_up: Add or update license",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":boom:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💥 Introduce breaking changes",
         documentation = {
             kind = "plaintext",
@@ -452,10 +488,11 @@ return {
         emoji = "💥",
         filterText = ":boom: Introduce breaking changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":bento:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🍱 Add or update assets",
         documentation = {
             kind = "plaintext",
@@ -464,10 +501,11 @@ return {
         emoji = "🍱",
         filterText = ":bento: Add or update assets",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":wheelchair:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ♿️ Improve accessibility",
         documentation = {
             kind = "plaintext",
@@ -476,10 +514,11 @@ return {
         emoji = "♿️",
         filterText = ":wheelchair: Improve accessibility",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":bulb:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💡 Add or update comments in source code",
         documentation = {
             kind = "plaintext",
@@ -488,10 +527,11 @@ return {
         emoji = "💡",
         filterText = ":bulb: Add or update comments in source code",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":beers:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🍻 Write code drunkenly",
         documentation = {
             kind = "plaintext",
@@ -500,10 +540,11 @@ return {
         emoji = "🍻",
         filterText = ":beers: Write code drunkenly",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":speech_balloon:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💬 Add or update text and literals",
         documentation = {
             kind = "plaintext",
@@ -512,10 +553,11 @@ return {
         emoji = "💬",
         filterText = ":speech_balloon: Add or update text and literals",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":card_file_box:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🗃️ Perform database related changes",
         documentation = {
             kind = "plaintext",
@@ -524,10 +566,11 @@ return {
         emoji = "🗃️",
         filterText = ":card_file_box: Perform database related changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":loud_sound:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔊 Add or update logs",
         documentation = {
             kind = "plaintext",
@@ -536,10 +579,11 @@ return {
         emoji = "🔊",
         filterText = ":loud_sound: Add or update logs",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":mute:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔇 Remove logs",
         documentation = {
             kind = "plaintext",
@@ -548,10 +592,11 @@ return {
         emoji = "🔇",
         filterText = ":mute: Remove logs",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":busts_in_silhouette:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 👥 Add or update contributor(s)",
         documentation = {
             kind = "plaintext",
@@ -560,10 +605,11 @@ return {
         emoji = "👥",
         filterText = ":busts_in_silhouette: Add or update contributor(s)",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":children_crossing:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚸 Improve user experience / usability",
         documentation = {
             kind = "plaintext",
@@ -572,10 +618,11 @@ return {
         emoji = "🚸",
         filterText = ":children_crossing: Improve user experience / usability",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":building_contruction:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🏗️ Make architectural changes",
         documentation = {
             kind = "plaintext",
@@ -584,10 +631,11 @@ return {
         emoji = "🏗️",
         filterText = ":building_contruction: Make architectural changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":iphone:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📱 Work on responsive design",
         documentation = {
             kind = "plaintext",
@@ -596,10 +644,11 @@ return {
         emoji = "📱",
         filterText = ":iphone: Work on responsive design",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":clown:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🤡 Mock things",
         documentation = {
             kind = "plaintext",
@@ -608,10 +657,11 @@ return {
         emoji = "🤡",
         filterText = ":clown: Mock things",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":egg:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🥚 Add or update an easter egg",
         documentation = {
             kind = "plaintext",
@@ -620,10 +670,11 @@ return {
         emoji = "🥚",
         filterText = ":egg: Add or update an easter egg",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":see_no_evil:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🙈 Add or update a .gitignore file",
         documentation = {
             kind = "plaintext",
@@ -632,10 +683,11 @@ return {
         emoji = "🙈",
         filterText = ":see_no_evil: Add or update a .gitignore file",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":camera_flash:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 📸 Add or update snapshots",
         documentation = {
             kind = "plaintext",
@@ -644,10 +696,11 @@ return {
         emoji = "📸",
         filterText = ":camera_flash: Add or update snapshots",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":alembic:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⚗️  Perform experiments",
         documentation = {
             kind = "plaintext",
@@ -656,10 +709,11 @@ return {
         emoji = "⚗️",
         filterText = ":alembic: Perform experiments",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":mag:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🔍️ Improve SEO",
         documentation = {
             kind = "plaintext",
@@ -668,10 +722,11 @@ return {
         emoji = "🔍️",
         filterText = ":mag: Improve SEO",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":label:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🏷️ Add or update types",
         documentation = {
             kind = "plaintext",
@@ -680,10 +735,11 @@ return {
         emoji = "🏷️",
         filterText = ":label: Add or update types",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":seedling:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🌱 Add or update seed files",
         documentation = {
             kind = "plaintext",
@@ -692,10 +748,11 @@ return {
         emoji = "🌱",
         filterText = ":seedling: Add or update seed files",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":triangular_flag_on_pole:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🚩 Add, update, or remove feature flags",
         documentation = {
             kind = "plaintext",
@@ -704,10 +761,11 @@ return {
         emoji = "🚩",
         filterText = ":triangular_flag_on_pole: Add, update, or remove feature flags",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":goal_net:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🥅 Catch errors",
         documentation = {
             kind = "plaintext",
@@ -716,10 +774,11 @@ return {
         emoji = "🥅",
         filterText = ":goal_net: Catch errors",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":dizzy:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💫 Add or update animations and transitions",
         documentation = {
             kind = "plaintext",
@@ -728,10 +787,11 @@ return {
         emoji = "💫",
         filterText = ":dizzy: Add or update animations and transitions",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":wastebucket:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🗑️ Deprecate code that needs to be cleaned up",
         documentation = {
             kind = "plaintext",
@@ -740,10 +800,11 @@ return {
         emoji = "🗑️",
         filterText = ":wastebucket: Deprecate code that needs to be cleaned up",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":passport_control:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🛂 Work on code related to authorization, roles and permissions",
         documentation = {
             kind = "plaintext",
@@ -752,10 +813,11 @@ return {
         emoji = "🛂",
         filterText = ":passport_control: Work on code related to authorization, roles and permissions",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":adhesive_bandage:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🩹 Simple fix for a non-critical issue",
         documentation = {
             kind = "plaintext",
@@ -764,10 +826,11 @@ return {
         emoji = "🩹",
         filterText = ":adhesive_bandage: Simple fix for a non-critical issue",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":monocle_face:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🧐 Data exploration/inspection",
         documentation = {
             kind = "plaintext",
@@ -776,10 +839,11 @@ return {
         emoji = "🧐",
         filterText = ":monocle_face: Data exploration/inspection",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":coffin:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " ⚰️  Remove dead code",
         documentation = {
             kind = "plaintext",
@@ -788,10 +852,11 @@ return {
         emoji = "⚰️",
         filterText = ":coffin: Remove dead code",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":test_tube:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🧪 Add a failing test",
         documentation = {
             kind = "plaintext",
@@ -800,10 +865,11 @@ return {
         emoji = "🧪",
         filterText = ":test_tube: Add a failing test",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":necktie:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 👔 Add or update business logic",
         documentation = {
             kind = "plaintext",
@@ -812,10 +878,11 @@ return {
         emoji = "👔",
         filterText = ":necktie: Add or update business logic",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":stethoscope:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🩺 Add or update healthcheck",
         documentation = {
             kind = "plaintext",
@@ -824,10 +891,11 @@ return {
         emoji = "🩺",
         filterText = ":stethoscope: Add or update healthcheck",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":bricks:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🧱 Infrastructure related changes",
         documentation = {
             kind = "plaintext",
@@ -836,10 +904,11 @@ return {
         emoji = "🧱",
         filterText = ":bricks: Infrastructure related changes",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":technologist:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🧑💻 Improve developer experience",
         documentation = {
             kind = "plaintext",
@@ -848,10 +917,11 @@ return {
         emoji = "🧑💻",
         filterText = ":technologist: Improve developer experience",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":money_with_wings:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 💸 Add sponsorships or money related infrastructure",
         documentation = {
             kind = "plaintext",
@@ -860,10 +930,11 @@ return {
         emoji = "💸",
         filterText = ":money_with_wings: Add sponsorships or money related infrastructure",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":thread:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🧵 Add or update code related to multithreading or concurrency",
         documentation = {
             kind = "plaintext",
@@ -872,10 +943,11 @@ return {
         emoji = "🧵",
         filterText = ":thread: Add or update code related to multithreading or concurrency",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
     {
         text = ":safety_vest:",
-        kind = 20,
+        kind = vim.lsp.protocol.CompletionItemKind.EnumMember,
         label = " 🦺 Add or update code related to validation",
         documentation = {
             kind = "plaintext",
@@ -884,5 +956,6 @@ return {
         emoji = "🦺",
         filterText = ":safety_vest: Add or update code related to validation",
         insertText = "",
+        insertTextFormat = vim.lsp.protocol.InsertTextFormat.PlainText,
     },
 }
