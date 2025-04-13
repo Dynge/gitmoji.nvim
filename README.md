@@ -86,10 +86,10 @@ require("blink").setup({
         },
     },
 })
+```
 
 
 ## Usage
 
 The completion is triggered on the `:` character.
 
-```
