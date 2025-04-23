@@ -21,7 +21,7 @@ function source:_validate_config()
     })
 end
 
-function source:is_available()
+function source:enabled()
     if not self.opts or vim.tbl_isempty(self.opts.filetypes) then
         return true
     end
