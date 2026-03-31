@@ -14,11 +14,9 @@ function source.new(opts)
 end
 
 function source:_validate_config()
-    vim.validate({
-        filetypes = { self.opts.filetypes, "table" },
-        ["completion.append_space"] = { self.opts.completion.append_space, "boolean" },
-        ["completion.complete_as"] = { self.opts.completion.complete_as, "string" },
-    })
+    vim.validate("filetypes", self.opts.filetypes, "table")
+    vim.validate("completion.append_space", self.opts.completion.append_space, "boolean")
+    vim.validate("completion.complete_as", self.opts.completion.complete_as, "string")
 end
 
 function source:enabled()
